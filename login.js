@@ -3,7 +3,6 @@ let number = document.getElementById("telNumber");
 let gmail = document.getElementById("gmail");
 let password = document.getElementById("password");
 let formulario = document.getElementById("formulario");
-
 formulario.addEventListener("submit", logIn);
 function logIn(e) {
   e.preventDefault();
