@@ -25,3 +25,10 @@ class Trans {
 function transf(e) {
   e.preventDefault();
 }
+Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "Bienvenido " + nombre,
+  showConfirmButton: false,
+  timer: 1500,
+});

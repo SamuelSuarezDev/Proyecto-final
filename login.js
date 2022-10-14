@@ -4,7 +4,10 @@ let gmail = document.getElementById("gmail");
 let password = document.getElementById("password");
 let formulario = document.getElementById("formulario");
 formulario.addEventListener("submit", logIn);
+let usuarios = JSON.parse(localStorage.getItem("usuarios"));
 function logIn(e) {
+  e.preventDefault();
+  localStorage.setItem("usuarios", JSON.stringify(usuarios));
   e.preventDefault();
   if (
     name.value != "" &&
@@ -12,31 +15,38 @@ function logIn(e) {
     gmail.value != "" &&
     password.value != ""
   ) {
-    if (
-      localStorage.getItem("nombre") == "" &&
-      localStorage.getItem("telefono") == "" &&
-      localStorage.getItem("gmail") == "" &&
-      localStorage.getItem("contraseña") == ""
-    ) {
-      location.href = "index.html";
+    if (usuarios.some((user) => user.nombre === name.value)) {
+      Swal.fire(
+        "Oooops",
+        "El nombre de usuario ya esta en uso, ponte uno mas cool",
+        "error",
+        "Ok"
+      );
+      return;
+    } else {
+      location.href = "home.html";
       localStorage.setItem("nombre", name.value);
       localStorage.setItem("telefono", number.value);
       localStorage.setItem("gmail", gmail.value);
       localStorage.setItem("contraseña", password.value);
-    } else {
-      if (
-        name.value === localStorage.getItem("nombre") &&
-        number.value === localStorage.getItem("telefono") &&
-        gmail.value === localStorage.getItem("gmail") &&
-        password.value === localStorage.getItem("contraseña")
-      ) {
-        location.href = "index.html";
-      } else {
-        let alert = (document.getElementById("alert2").style.visibility =
-          "visible");
-      }
     }
+
+    const nuevoUsuario = {
+      nombre: name.value,
+      telefono: number.value,
+      mail: gmail.value,
+      pass: password.value,
+    };
+
+    usuarios.push(nuevoUsuario);
+
+    localStorage.setItem("usuarios", JSON.stringify(usuarios)); //guardamos todo el array, no los datos individuales
   } else {
-    let alert = (document.getElementById("alert").style.visibility = "visible");
+    Swal.fire(
+      "Oooops",
+      "Parece que se te ha escapado llenar un campo, todos son obligatorios",
+      "info",
+      "Ok"
+    );
   }
 }

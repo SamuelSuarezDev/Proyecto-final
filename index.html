@@ -7,43 +7,51 @@
     />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
-      rel="stylesheet"
+    <meta
+      name="viewport"
+      content="width=
+  , initial-scale=1.0"
     />
+    <link rel="stylesheet" href="login.css" />
+    <title>Document</title>
   </head>
-  <body id="consigner">
-    <header class="header">
-      <img class="img" src="./Assets/img/logo.png" alt="" />
-      <h3 class="p" id="hello"></h3>
+  <body>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <header>
+      <img src="./Assets/img/Group 1.png" alt="" />
     </header>
-    <form action="" id="formulario">
-      <div>
-        <label for="tel">Numero a consignar</label>
-        <input id="numero" type="tel" id="tel" />
-      </div>
-      <div>
-        <label for="price">Cantidad a consignar</label>
-        <input id="precio" type="number" id="price" />
-      </div>
-      <div>
-        <select name="" id="">
-          <option value="1">PayPal</option>
-          <option value="1">PayPal</option>
-          <option value="1">PayPal</option>
-          <option value="1">PayPal</option>
-          <option value="1">PayPal</option>
-        </select>
-      </div>
-      <div class="message">
-        <label for="">Mensaje</label>
-        <input id="message" type="textarea" />
-      </div>
-      <div class="submit-container"><input type="submit" class="submit" /></div>
-    </form>
-    <script src="./index.js"></script>
+    <div class="form-container">
+      <form id="formulario">
+        <div>
+          <label for="name">Nombre Completo</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="telNumber">Numero De Telefono</label>
+          <input type="number" id="telNumber" />
+        </div>
+        <div>
+          <label for="gmail">Correo Electronico</label>
+          <input type="email" id="gmail" />
+        </div>
+        <div>
+          <label for="password">Constraseña</label>
+          <input type="password" id="password" />
+        </div>
+        <div class="submit">
+          <input type="submit" />
+        </div>
+      </form>
+    </div>
+    <footer>
+      <span>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/2438/2438078.png"
+          alt=""
+        />
+        <p>Todos los derechos reservados</p>
+      </span>
+    </footer>
+    <script src="./login.js"></script>
   </body>
 </html>

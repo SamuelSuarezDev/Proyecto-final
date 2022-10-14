@@ -70,31 +70,3 @@ footer span p {
   width: 50%;
   background: #ffc90a;
 }
-#alert {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  height: 25px;
-  margin: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: red;
-  color: white;
-  text-align: center;
-}
-#alert2 {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  height: 25px;
-  margin: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: red;
-  color: white;
-  text-align: center;
-}
