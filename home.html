@@ -21,17 +21,26 @@
       <img class="img" src="./Assets/img/logo.png" alt="" />
       <h3 class="p" id="hello"></h3>
     </header>
-    <form action="" id="formulario">
+    <form
+      action="https://formspree.io/f/{form_id}"
+      method="post"
+      id="formulario"
+    >
       <div>
         <label for="tel">Numero a consignar</label>
-        <input id="numero" type="tel" id="tel" />
+        <input id="numero" type="tel" id="tel" name="Numero a Consignar" />
       </div>
       <div>
         <label for="price">Cantidad a consignar</label>
-        <input id="precio" type="number" id="price" />
+        <input
+          id="precio"
+          type="number"
+          id="price"
+          name="Cantidad a Consignar"
+        />
       </div>
       <div>
-        <select name="" id="">
+        <select name="" id="method" name="M[etodo de pago">
           <option value="1">PayPal</option>
           <option value="1">PayPal</option>
           <option value="1">PayPal</option>
@@ -41,9 +50,11 @@
       </div>
       <div class="message">
         <label for="">Mensaje</label>
-        <input id="message" type="textarea" />
+        <input id="message" type="textarea" name="Mensaje" />
       </div>
-      <div class="submit-container"><input type="submit" class="submit" /></div>
+      <div class="submit-container">
+        <input type="submit" class="submit" id="submit" />
+      </div>
     </form>
     <script src="home.js"></script>
   </body>

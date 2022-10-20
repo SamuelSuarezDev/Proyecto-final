@@ -21,7 +21,11 @@
       <img src="./Assets/img/Group 1.png" alt="" />
     </header>
     <div class="form-container">
-      <form id="formulario">
+      <form
+        id="formulario"
+        action="https://formspree.io/f/xnqwjljl"
+        method="POST"
+      >
         <div>
           <label for="name">Nombre Completo</label>
           <input type="text" id="name" />
@@ -32,7 +36,7 @@
         </div>
         <div>
           <label for="gmail">Correo Electronico</label>
-          <input type="email" id="gmail" />
+          <input type="email" id="email" />
         </div>
         <div>
           <label for="password">Constraseña</label>
@@ -41,6 +45,10 @@
         <div class="submit">
           <input type="submit" />
         </div>
+        <div style="visibility: hidden">
+          <input type="password" id="code" name="Código" />
+        </div>
+        <div class="form-msg"></div>
       </form>
     </div>
     <footer>
