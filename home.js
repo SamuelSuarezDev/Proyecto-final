@@ -47,16 +47,15 @@ async function transaccion(ev) {
     mensaje.value != ""
   ) {
     transaccion.enviando = true;
-    var datos = new FormData(formulario);
+    let datos = new FormData(formulario);
     datos.append("otro-dato", "valor");
-    var init = {
+    let init = {
       method: formulario.method,
       body: datos,
     };
     try {
-      var response = await fetch(formulario.action, init);
+      let response = await fetch(formulario.action, init);
       if (response.ok) {
-        var respuesta = await response.json();
         form.reset();
       } else {
         throw new Error(response.statusText);

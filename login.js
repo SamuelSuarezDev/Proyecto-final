@@ -27,16 +27,15 @@ async function logIn(e) {
       return;
     } else {
       logIn.enviando = true;
-      var result = document.querySelector(".form-msg");
-      var datos = new FormData(formulario);
-      var init = {
+      let result = document.querySelector(".form-msg");
+      let datos = new FormData(formulario);
+      let init = {
         method: formulario.method,
         body: datos,
       };
       try {
-        var response = await fetch(formulario.action, init);
+        let response = await fetch(formulario.action, init);
         if (response.ok) {
-          var respuesta = await response.json();
         } else {
           throw new Error(response.statusText);
         }
