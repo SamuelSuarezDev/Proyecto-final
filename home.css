@@ -12,18 +12,17 @@ header {
   background-color: #ffd646;
 }
 header img {
-  width: 350px;
-  height: 50px;
+  width: 650px;
+  height: 100px;
   margin-top: 2%;
+  margin-left: 10%;
 }
 .form-container {
-  width: 100%;
   height: 300px;
   background: #ffd646;
 }
 form {
   padding: 0 50px;
-  width: 90%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -37,10 +36,12 @@ form input {
   background: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 25px;
-  border-radius: 10px;
+  border-radius: 20px;
+  padding: 10px;
   border: none;
+  background-color: #d9d9d9;
 }
-form div {
+.part {
   width: 40%;
   margin: 20px 0;
   display: flex;
@@ -48,17 +49,19 @@ form div {
 }
 .p {
   margin-right: 45%;
+  width: 100%;
 }
 .message {
   margin-top: 0;
 }
 .message input {
-  height: 70px;
+  height: 80px;
+  background-color: #d9d9d9;
 }
 .submit {
-  height: 25px;
-  width: 50%;
-  background-color: #ffd646;
+  padding: 28px;
+  text-align: center;
+  border-radius: 25px;
 }
 select {
   margin: 0;
@@ -66,11 +69,12 @@ select {
   box-shadow: none;
   border: 0 !important;
   cursor: pointer;
-  width: 70%;
+  width: 74%;
   background: #fff;
+  background-color: #d9d9d9;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 30px;
-  border-radius: 10px;
+  border-radius: 20px;
+  padding: 15px;
   border: none;
 }
 @media (max-width: 768px) {
@@ -96,4 +100,56 @@ select {
     margin-right: 0;
     font-size: 15px;
   }
+}
+.historyContent {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10%;
+}
+.trans {
+  display: flex;
+  width: 25%;
+  margin-top: 20px;
+  border-radius: 21px;
+  margin-left: 45px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+  justify-content: center;
+  flex-direction: column;
+}
+.trans:nth-child(odd) {
+  background-color: #d9d9d9;
+}
+.trans:nth-child(even) {
+  background-color: #ffd646;
+}
+.trans:nth-child(1) {
+  display: none;
+}
+h1 {
+  margin-left: 40px;
+}
+span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.number {
+  display: flex;
+  width: 100%;
+}
+.number input:nth-child(2) {
+  width: 34%;
+  border-radius: 0 30px 30px 0;
+  box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  padding: 15px;
+}
+.number select {
+  width: 24%;
+  border-radius: 30px 0 0 30px;
+  box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
 }

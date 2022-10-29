@@ -78,7 +78,7 @@ async function logIn(e) {
 
     usuarios.push(nuevoUsuario);
 
-    localStorage.setItem("usuarios", JSON.stringify(usuarios)); //guardamos todo el array, no los datos individuales
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
   } else {
     Swal.fire(
       "Oooops",

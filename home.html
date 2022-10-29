@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head> <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="home.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
-      rel="stylesheet"
+    <meta
+      name="viewport"
+      content="width=
+  , initial-scale=1.0"
     />
+    <link rel="stylesheet" href="home.css" />
+    <title>Document</title>
   </head>
   <body id="consigner">
     <header class="header">
@@ -22,40 +25,56 @@
       <h3 class="p" id="hello"></h3>
     </header>
     <form
-      action="https://formspree.io/f/{form_id}"
-      method="post"
-      id="formulario"
-    >
-      <div>
-        <label for="tel">Numero a consignar</label>
-        <input id="numero" type="tel" id="tel" name="Numero a Consignar" />
+        id="formulario"
+        action="https://formspree.io/f/mbjbzojq"
+        method="POST"
+      >
+      <div class="part">
+        <label for="email">Gmail a pagar</label>
+          <input  type="email" id="email" />
+        </div>
       </div>
-      <div>
+      <div class="part">
         <label for="price">Cantidad a consignar</label>
         <input
           id="precio"
           type="number"
           id="price"
-          name="Cantidad a Consignar"
+          name="Cantidad que te consignó"
         />
       </div>
-      <div>
-        <select name="" id="method" name="M[etodo de pago">
-          <option value="1">PayPal</option>
-          <option value="1">PayPal</option>
-          <option value="1">PayPal</option>
-          <option value="1">PayPal</option>
-          <option value="1">PayPal</option>
+      <div class="part">
+        <select
+          name=""
+          id="method"
+          aria-placeholder="Método de pago"
+          name="Método de pago"
+        >
+          <option value="PayPal">PayPal</option>
+          <option value="Nequi">Nequi Bancolombia</option>
+          <option value="PayZen">PayZen</option>
+          <option value="Mercado Pago">Mercado Pago</option>
+          <option value="Oyster">Oyster</option>
         </select>
       </div>
-      <div class="message">
+      <div class="part" class="message">
         <label for="">Mensaje</label>
         <input id="message" type="textarea" name="Mensaje" />
       </div>
-      <div class="submit-container">
+      <div class="part" class="submit-container">
         <input type="submit" class="submit" id="submit" />
       </div>
     </form>
+    <h1>Historial de tus transferencias</h1>
+    <section class="historyContent" id="section">
+      <div class="trans" id="transfer">
+        <h2 id="fecha"></h2>
+        <span id="cantidad"></span>
+        <span id="telefono"></span>
+        <span id="metodo"></span>
+        <span id="mensaje"></span>
+      </div>
+    </section>
     <script src="home.js"></script>
   </body>
 </html>
