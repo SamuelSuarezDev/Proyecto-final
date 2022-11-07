@@ -1,5 +1,4 @@
 let name = document.getElementById("name");
-let number = document.getElementById("telNumber");
 let gmail = document.getElementById("email");
 let password = document.getElementById("password");
 let formulario = document.getElementById("formulario");
@@ -11,12 +10,7 @@ async function logIn(e) {
   codigo.value = Math.ceil(Math.random() * 9999);
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
   e.preventDefault();
-  if (
-    name.value != "" &&
-    number.value != "" &&
-    gmail.value != "" &&
-    password.value != ""
-  ) {
+  if (name.value != "" && gmail.value != "" && password.value != "") {
     if (usuarios.some((user) => user.nombre === name.value)) {
       Swal.fire(
         "Oooops",
@@ -55,7 +49,6 @@ async function logIn(e) {
       if (password === codigo.value) {
         location.href = "home.html";
         localStorage.setItem("nombre", name.value);
-        localStorage.setItem("telefono", number.value);
         localStorage.setItem("gmail", gmail.value);
         localStorage.setItem("contraseña", password.value);
       } else {
@@ -70,7 +63,6 @@ async function logIn(e) {
 
     const nuevoUsuario = {
       nombre: name.value,
-      telefono: number.value,
       mail: gmail.value,
       pass: password.value,
     };

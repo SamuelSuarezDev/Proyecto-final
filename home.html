@@ -20,19 +20,22 @@
     <title>Document</title>
   </head>
   <body id="consigner">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <header class="header">
       <img class="img" src="./Assets/img/logo.png" alt="" />
       <h3 class="p" id="hello"></h3>
     </header>
+    <h1>¿Cuanto y a quien consignarás hoy?</h1>
     <form
         id="formulario"
-        action="https://formspree.io/f/mbjbzojq"
+        action="https://formspree.io/f/mwkzwdlb"
         method="POST"
       >
       <div class="part">
         <label for="email">Gmail a pagar</label>
           <input  type="email" id="email" />
         </div>
+
       </div>
       <div class="part">
         <label for="price">Cantidad a consignar</label>
@@ -42,20 +45,6 @@
           id="price"
           name="Cantidad que te consignó"
         />
-      </div>
-      <div class="part">
-        <select
-          name=""
-          id="method"
-          aria-placeholder="Método de pago"
-          name="Método de pago"
-        >
-          <option value="PayPal">PayPal</option>
-          <option value="Nequi">Nequi Bancolombia</option>
-          <option value="PayZen">PayZen</option>
-          <option value="Mercado Pago">Mercado Pago</option>
-          <option value="Oyster">Oyster</option>
-        </select>
       </div>
       <div class="part" class="message">
         <label for="">Mensaje</label>
@@ -70,8 +59,7 @@
       <div class="trans" id="transfer">
         <h2 id="fecha"></h2>
         <span id="cantidad"></span>
-        <span id="telefono"></span>
-        <span id="metodo"></span>
+        <span id="mail"></span>
         <span id="mensaje"></span>
       </div>
     </section>
